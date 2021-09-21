@@ -13,7 +13,7 @@ class Header extends Component {
             <ul>
               <li>
                 <a
-                  href="https://github.com/IchikonWD/Todo-simple-project"
+                  href="https://github.com/IchikonWD/TO-DO"
                   rel="noreferrer"
                   target="_blank"
                 >
