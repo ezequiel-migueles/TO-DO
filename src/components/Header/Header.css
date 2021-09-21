@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+nav {
+  background: #26272b;
+  font-family: "Roboto", sans-serif;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 16px;
+  color: white;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}
+nav ul li a {
+  height: 50px;
+  margin: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(202, 200, 200);
+  text-transform: capitalize;
+  position: relative;
+}
+nav ul li a:hover {
+  color: #ececec;
+}
+nav ul li a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border: 1px solid #e05d26;
+}
+.active {
+  color: #f3f3f3 !important;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border: 1px solid #e05d26;
+}
+.account {
+  color: #fff;
+  cursor: pointer;
+}
+.account a {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.register {
+  padding: 12px 19px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.login {
+  padding: 12px 23px;
+  background: #e05d26;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+}
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-1 {
+  width: 100%;
+  background-color: #121214;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #242424;
+}
+.nav-1 nav {
+  width: 100%;
+}
