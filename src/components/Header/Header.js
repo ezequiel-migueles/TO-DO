@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
@@ -11,6 +12,15 @@ class Header extends Component {
           </div>
           <div className="account">
             <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/todo">To - Do</Link>
+              </li>
+              <li>
+                <Link to="/weather">Weather</Link>
+              </li>
               <li>
                 <a
                   href="https://github.com/IchikonWD/TO-DO"

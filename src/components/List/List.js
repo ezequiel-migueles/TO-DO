@@ -9,10 +9,14 @@ class List extends Component {
 
     // Initialize state
     this.state = {
-      data: {},
       cards: cards,
     };
   }
+
+  componentDidMount() {
+    this.setState({ data: this.state.cards });
+  };
+
   // Add card to state
   addCard = (e) => {
     e.preventDefault();
