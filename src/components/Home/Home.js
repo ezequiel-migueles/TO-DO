@@ -5,8 +5,8 @@ class Home extends Component {
   render() {
     return (
       <main>
-        <h1>Home</h1>
-        <img src={img} />
+        <h1>Welcome to the App!</h1>
+        <img src={img} alt='Logo'/>
       </main>
     );
   }

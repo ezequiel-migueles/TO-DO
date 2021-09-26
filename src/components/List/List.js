@@ -10,12 +10,21 @@ class List extends Component {
     // Initialize state
     this.state = {
       cards: cards,
+      show: false,
     };
   }
-
+  // Load data on Component Mount
   componentDidMount() {
     this.setState({ data: this.state.cards });
-  };
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.inputText !== this.state.inputText) {
+      //! TODO - Filter the data based on the input
+    }
+  }
+  // Toogle show/hide add button
+  toggle = () =>
+    this.setState((currentState) => ({ show: !currentState.show }));
 
   // Add card to state
   addCard = (e) => {
@@ -53,22 +62,28 @@ class List extends Component {
     ));
   };
 
+
   render() {
     return (
       <section className="main-body">
         <hr className="separator" />
         <section className="top">
           <form className="form" onSubmit={this.addCard}>
-            <input type="text" name="title" placeholder="Task Title" required />
+            <input
+              type="text"
+              name="title"
+              required
+              placeholder="Title of your Task"
+            />
             &nbsp;&nbsp;
             <input
               type="text"
               name="category"
-              placeholder="Category"
+              placeholder="Category of your Task"
               required
             />
             &nbsp;&nbsp;
-            <input type="date" name="date" placeholder="" required />
+            <input type="date" name="date" placeholder="" required/>
             &nbsp;&nbsp;
             <select name="priority" required>
               <option value="">Select...</option>
@@ -86,9 +101,11 @@ class List extends Component {
               </option>
             </select>
             &nbsp;&nbsp;
-            <input type="text" name="task" placeholder="Task" required />
+            <input type="text" name="task" placeholder="Task Description" required onChange={this.toggle}/>
             &nbsp;&nbsp;
-            <input className="top-button" type="submit" value="ADD" />
+            {this.state.show && (
+              <input className="top-button" type="submit" value="ADD" />
+            )}
           </form>
           <button className="top-button" onClick={this.resetCards}>
             RESET
